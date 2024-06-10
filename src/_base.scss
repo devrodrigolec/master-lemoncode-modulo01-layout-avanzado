@@ -1,0 +1,28 @@
+/* Colors */
+
+$body-background-color: #141414;
+
+/* Text */
+$text-primary-color: #fff;
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Jost-Regular.ttf") format("truetype");
+}
+
+@mixin button-style {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+  }
+}
