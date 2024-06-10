@@ -26,3 +26,26 @@ $text-primary-color: #fff;
     cursor: pointer;
   }
 }
+
+@mixin section-styles {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  gap: 8px;
+}
+
+@mixin item-styles {
+  flex: 1;
+
+  img {
+    
+    width: 100%;
+  }
+
+  :hover {
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+  }
+}

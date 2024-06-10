@@ -17,6 +17,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 
   .header-logo {
     display: flex;
@@ -38,8 +39,57 @@ header {
     gap: 12px;
     padding: 16px;
 
-    &> div {
-      @include button-style()
+    & > div {
+      @include button-style();
     }
   }
+}
+
+.section-title {
+  padding-top: 32px;
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding: 16px;
+  .top-item {
+    flex: 1;
+
+    img {
+      min-width: 225px;
+      width: 100%;
+    }
+
+    :hover {
+      cursor: pointer;
+      transition: all;
+      transition-duration: 0.5s;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.first {
+  @include section-styles();
+
+  .item {
+    @include item-styles();
+  }
+}
+
+.second {
+  @include section-styles();
+
+  .item {
+    @include item-styles();
+  }
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
 }
