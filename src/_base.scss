@@ -1,9 +1,12 @@
 /* Colors */
-
 $body-background-color: #141414;
 
 /* Text */
 $text-primary-color: #fff;
+
+/* media breakpoints */
+$breakpoint-tablet: 1280px;
+$breakpoint-mobile: 720px;
 
 @font-face {
   font-family: "Jost";
@@ -29,16 +32,17 @@ $text-primary-color: #fff;
 
 @mixin section-styles {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
   padding: 16px;
-  gap: 8px;
+  gap: 4px;
 }
 
 @mixin item-styles {
   flex: 1;
+  min-width: 250px;
 
   img {
-    
     width: 100%;
   }
 
@@ -46,6 +50,12 @@ $text-primary-color: #fff;
     cursor: pointer;
     transition: all;
     transition-duration: 0.5s;
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+
+  /* media */
+
+  @media screen and (min-width: $breakpoint-tablet) and (max-width: 1580px) {
+    flex: 1 1 350px;
   }
 }
